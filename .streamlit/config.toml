@@ -1,0 +1,14 @@
+[theme]
+base = "light"
+primaryColor = "#147d71"
+backgroundColor = "#fafbf8"
+secondaryBackgroundColor = "#eef3ee"
+textColor = "#17333b"
+font = "sans serif"
+[server]
+headless = true
+address = "127.0.0.1"
+port = 8530
+maxUploadSize = 2
+[browser]
+gatherUsageStats = false

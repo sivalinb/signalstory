@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="lesson.css"></head><body>
+<section class="shell" aria-label="Interactive concept studio">
+<header class="top"><div><p class="kicker"><span class="status-dot"></span> THE CONCEPT STUDIO</p><h2 id="title">Loading your story…</h2></div><span class="tag">ONE IDEA. FIVE MOMENTS.</span></header>
+<div class="diagram"><canvas id="canvas" width="1720" height="640" role="img" aria-label="Animated concept diagram"></canvas></div>
+<div class="controls"><button id="play" aria-label="Play story">▶ Play story</button><button id="back" aria-label="Previous animation step">←</button><button id="next" aria-label="Next animation step">→</button><input id="step" type="range" min="0" max="4" step="1" value="0" aria-label="Animation step"><select id="speed" aria-label="Animation speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></div>
+<div class="narration" aria-live="polite" aria-atomic="true"><span class="counter" id="counter">MOMENT 1 OF 5</span><h3 id="step-title"></h3><p id="narration"></p></div>
+<div class="explore" id="explore" hidden><p><strong>Make it yours.</strong> Change one input and follow the evidence.</p><div class="slider-row"><label id="knob-label" for="knob"></label><input id="knob" type="range"><output id="knob-value" for="knob"></output></div><div id="function-row" class="function-row" hidden><label for="function">Function</label><select id="function"><option>sum_over_time</option><option>avg_over_time</option><option>min_over_time</option><option>max_over_time</option><option>count_over_time</option></select></div></div>
+<div class="calculation"><p class="kicker">THE EVIDENCE, IN PLAIN SIGHT</p><div id="formula"></div><p id="detail"></p></div>
+<footer>Small teaching example · Actual PromQL runs in the query lab · Space to play, arrows to step</footer>
+</section><script src="math.js"></script><script src="lesson.js"></script></body></html>

@@ -1,0 +1,8 @@
+[
+  {"question":"Explain counter versus gauge to a beginner. Can each go down, and what happens on a process restart?", "concept_id":"v2-1-0", "facts":["A counter normally increases, except for resets.","A gauge can increase or decrease."]},
+  {"question":"Explain rate and irate. Samples are 100,110,120,130,190 at 0,15,30,45,60 seconds. Which samples does irate use, and what is its result?", "concept_id":"v2-4-1", "facts":["irate uses the final two samples.","The last change is 60 over 15 seconds, or 4 requests per second."]},
+  {"question":"A gauge has three samples 2,4,6. Explain why sum_over_time is 12 but does not mean 12 new events.", "concept_id":"v2-5-0", "facts":["The sum is 12.","Adding gauge samples is not counting new events."]},
+  {"question":"A request takes 0.42 seconds. For cumulative histogram buckets <=0.1, <=0.5, <=1 and +Inf, which counts increase? Explain why this does not count three separate requests.", "concept_id":"v2-2-2", "facts":["The 0.1 bucket does not change.","0.5, 1, and +Inf each increase by one.","It is one observation counted under several thresholds."]},
+  {"question":"Why should I combine histogram bucket rates before calculating service p95, rather than average the p95 values from two instances?", "concept_id":"v2-8-1", "facts":["Quantiles are not additive.","Retain le when aggregating classic bucket rates."]},
+  {"question":"Explain traceparent. Which ID remains the same across checkout, payment and database, and what changes for each span?", "concept_id":"otel-2-1", "facts":["The trace ID remains the same with propagation.","Span IDs identify separate operations."]}
+]

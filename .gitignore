@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.runtime/
+.tools/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.streamlit/secrets.toml
+*.sqlite3*
+.DS_Store
+build/
+*.egg-info/
+data/samples.csv

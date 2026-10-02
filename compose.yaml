@@ -1,0 +1,12 @@
+services:
+  studio:
+    build: .
+    ports:
+      - "127.0.0.1:8530:8530"
+    volumes:
+      - learning:/app/.runtime
+    mem_limit: 1g
+    cpus: 1.5
+    restart: unless-stopped
+volumes:
+  learning:
