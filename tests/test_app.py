@@ -46,7 +46,10 @@ def test_every_mission_renders_and_offline_tutor_works(tmp_path, monkeypatch):
         app.selectbox(key="current").set_value(m["id"]).run()
         assert not app.exception, m["id"]
     app.radio(key="nav").set_value("Ask a question").run()
-    app.checkbox[0].uncheck()
+    if not app.checkbox[0].disabled:
+        app.checkbox[0].uncheck()
+    else:
+        assert app.checkbox[0].value is False
     app.text_area[0].set_value("What makes a histogram bucket cumulative?")
     press(app, "Help me understand →")
     assert app.session_state["last_answer"]["mode"] == "Course guide"
